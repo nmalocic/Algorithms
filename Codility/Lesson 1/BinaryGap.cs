@@ -7,6 +7,33 @@ namespace Lesson1 {
 
     public class BinaryGap {
 
+        public int solution(int N)
+        {
+            string binaryRepresentation = Convert.ToString(N, 2);
+            int longestGap = 0;
+            bool shouldCountAsGap = false;
+            int currentGap = 0;
+
+            for (int i = 0; i < binaryRepresentation.Length; i++)
+            {
+                if (binaryRepresentation[i].Equals('1'))
+                {
+                    if (shouldCountAsGap && longestGap < currentGap)
+                    {
+                        longestGap = currentGap;
+                    }
+                    shouldCountAsGap = true;
+                    currentGap = 0;
+                }
+                else if (shouldCountAsGap && binaryRepresentation[i].Equals('0'))
+                {
+                    currentGap++;
+                }
+            }
+
+            return longestGap;
+        }
+
         /// <summary>
         /// functional solution, easy to read and understand.
         /// it may not fit into required speed or memory constraints.
@@ -30,7 +57,7 @@ namespace Lesson1 {
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
-        public int solution(int n)
+        public int solution3(int n)
         {
             int powerOf2 = 1073741824; // 2^30
             short max = 0; // current Maximum
