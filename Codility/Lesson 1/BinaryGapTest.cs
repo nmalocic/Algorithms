@@ -43,5 +43,17 @@ namespace Lesson1 {
 
             Assert.Equal(0, result);
         }
+
+        [Fact]
+        public void Given_Number_2147483647_Returns_0()
+        {
+            Assert.Equal(0, _binaryGap.solution(2147483647));
+        }
+
+        [Fact]
+        public void Given_Number_1073741825_Returns_29()
+        {
+            Assert.Equal(29, _binaryGap.solution(1073741825));
+        }
     }
 }
