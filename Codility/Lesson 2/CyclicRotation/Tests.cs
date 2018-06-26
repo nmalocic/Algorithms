@@ -1,5 +1,6 @@
 ﻿using System;
 using Xunit;
+using Codility.Lesson_2.CyclicRotation.Implementations;
 
 namespace Codility.Lesson_2.CyclicRotation
 {
@@ -14,7 +15,7 @@ namespace Codility.Lesson_2.CyclicRotation
         /// <returns></returns>
         private ICyclicRotation GetImplementation()
         {
-            throw new NotImplementedException();
+            return new UsingLinq();
         }
 
         [Fact]

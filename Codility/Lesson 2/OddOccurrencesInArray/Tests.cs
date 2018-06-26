@@ -1,5 +1,6 @@
 ﻿using System;
 using Xunit;
+using Codility.Lesson_2.OddOccurrencesInArray.Implementations;
 
 namespace Codility.Lesson_2.OddOccurrencesInArray
 {
@@ -11,7 +12,7 @@ namespace Codility.Lesson_2.OddOccurrencesInArray
         /// <returns></returns>
         private IOddOccurences GetImplementation()
         {
-            throw new NotImplementedException();
+            return new BitwiseXor();
         }
 
         [Fact]
