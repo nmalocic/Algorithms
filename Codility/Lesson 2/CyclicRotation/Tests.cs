@@ -15,7 +15,7 @@ namespace Codility.Lesson_2.CyclicRotation
         /// <returns></returns>
         private ICyclicRotation GetImplementation()
         {
-            return new UsingLinq();
+            return new UsingEnumerable();
         }
 
         [Fact]
