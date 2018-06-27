@@ -13,7 +13,7 @@ namespace Codility.Lesson_3.FrogJmp
         /// <returns></returns>
         private IFrogJmp GetImplementation()
         {
-            throw new NotImplementedException();
+            return new SimpleFrogJmp();
         }
 
         [Fact]
@@ -33,6 +33,39 @@ namespace Codility.Lesson_3.FrogJmp
             Assert.Equal(expected, result);
         }
 
-        
+        [Fact]
+        public void Basic_example_2()
+        {
+            //Arrange
+            var X = 1;
+            var Y = 2;
+            var D = 500;
+
+            var expected = 1;
+
+            //Act
+            var result = GetImplementation().solution(X, Y, D);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void Basic_example_3()
+        {
+            //Arrange
+            var X = 1;
+            var Y = 1;
+            var D = 1;
+
+            var expected = 0;
+
+            //Act
+            var result = GetImplementation().solution(X, Y, D);
+
+            //Assert
+            Assert.Equal(expected, result);
+        }
+
     }
 }
