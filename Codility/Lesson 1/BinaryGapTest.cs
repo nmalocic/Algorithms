@@ -24,5 +24,33 @@ namespace Lesson1
 
             Assert.Equal(longestGap, result);
         }
+
+        [Theory]
+        [InlineData(9, 2)]
+        [InlineData(529, 4)]
+        [InlineData(20, 1)]
+        [InlineData(32, 0)]
+        [InlineData(2147483647, 0)]
+        [InlineData(1073741825, 29)]
+        public void TestSolution2(int input, int longestGap)
+        {
+            int result = _binaryGap.solution2(input);
+
+            Assert.Equal(longestGap, result);
+        }
+
+        [Theory]
+        [InlineData(9, 2)]
+        [InlineData(529, 4)]
+        [InlineData(20, 1)]
+        [InlineData(32, 0)]
+        [InlineData(2147483647, 0)]
+        [InlineData(1073741825, 29)]
+        public void TestSolution3(int input, int longestGap)
+        {
+            int result = _binaryGap.solution3(input);
+
+            Assert.Equal(longestGap, result);
+        }
     }
 }
