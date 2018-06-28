@@ -1,10 +1,9 @@
-﻿using System;
-using Xunit;
+﻿using Xunit;
 using Codility.Lesson_2.OddOccurrencesInArray.Implementations;
 
 namespace Codility.Lesson_2.OddOccurrencesInArray
 {
-    public class Tests
+    public class OddOccurencesTests
     {
         /// <summary>
         /// This should return solution that you want to test.
